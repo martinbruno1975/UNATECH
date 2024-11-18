@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ProductCard from '../componentes/ProductCard';
 import Cart from '../componentes/Cart';
-import Header from '../componentes/Header';
-import Footer from '../componentes/Footer';
 
 const ProductsPage = () => {
   const [products, setProducts] = useState([]);

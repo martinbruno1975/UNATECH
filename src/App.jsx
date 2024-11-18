@@ -1,10 +1,11 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Inicio from './pages/Inicio'
 import Productos from './pages/Productos'
 import FabricantesComponentes from './pages/FabricantesComponentes'
 import Header from './componentes/Header';
 import Footer from './componentes/Footer';
+import Producto from './pages/Producto';
 
 
 const App = () => {
@@ -14,7 +15,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/productos" element={<Productos />} />
+        <Route path="/productos/:id" element={<Producto />} />
         <Route path="/FabricantesComponentes" element={<FabricantesComponentes />} />
+        <Route path="/*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />
     </div>

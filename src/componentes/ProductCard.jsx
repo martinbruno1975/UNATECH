@@ -1,7 +1,10 @@
 // src/ProductCard.js
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ProductCard = ({ product, addToCart }) => {
+
+
   const [quantity, setQuantity] = useState(1);
 
   const handleAddToCart = () => {
@@ -21,6 +24,7 @@ const ProductCard = ({ product, addToCart }) => {
         onChange={(e) => setQuantity(Math.max(1, Number(e.target.value)))}
         style={styles.quantityInput}
       />
+      <Link to={'/productos/'+product.id} variant="primary">Ver más</Link>
       <button onClick={handleAddToCart} style={styles.button}>Agregar al carrito</button>
     </div>
   );

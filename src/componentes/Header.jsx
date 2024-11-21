@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
@@ -32,15 +32,14 @@ const Header = () => {
           <li><NavLink to="/">Inicio</NavLink></li>
           <li 
             className="dropdown" 
-            onMouseEnter={abrirSubMenu} // Abre el submenú al pasar el mouse
-            onMouseLeave={cerrarSubMenu} // Cierra el submenú al sacar el mouse
+            onMouseEnter={abrirSubMenu} 
+            onMouseLeave={cerrarSubMenu} 
           >
             <NavLink>Sobre Nosotros</NavLink>
             <ul className={`dropdown-menu ${subMenuAbierto ? 'show' : ''}`}>
               <li><NavLink >Servicios</NavLink></li>
               <li><NavLink >Galería</NavLink></li>
-              <li><NavLink >Contacto</NavLink></li>
-              <li><NavLink >Visitanos</NavLink></li>
+              <li><NavLink >Contacto/Ubicacion</NavLink></li>
             </ul>
           </li>
           <li><NavLink to="/productos">Productos</NavLink></li>

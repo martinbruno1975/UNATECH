@@ -28,7 +28,7 @@ const ProductsPage = () => {
 
   return (
     <div style={styles.page}>
-      <h1>Productos</h1>
+      <h1 style={{marginTop: '80px'}}>Productos</h1>
       <div style={styles.productList}>
         {products.map(product => (
           <ProductCard key={product.id} product={product} addToCart={addToCart} />
@@ -41,7 +41,7 @@ const ProductsPage = () => {
 
 const styles = {
   page: { padding: '2em' },
-  productList: { display: 'flex', flexWrap: 'wrap', gap: '1em' },
+  productList: { display: 'flex', flexWrap: 'wrap', gap: '3em' },
 };
 
 export default ProductsPage;

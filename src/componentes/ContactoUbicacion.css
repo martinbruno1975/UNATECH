@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 80px;
+  }
+  
+  .contact-info, .map-embed {
+    flex: 1;
+    min-width: 300px;
+  }
+  

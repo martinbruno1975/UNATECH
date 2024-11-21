@@ -1,21 +1,17 @@
-// src/Content.js
 import React from 'react';
 import AboutUs from './AboutUs';
-//import NavigationMenu from './componentes/NavigationMenu';
 import ImageGallery from './ImageGallery';
 import VideoEmbed from './VideoEmbed';
-import Description from './Description';
 import ContactInfo from './ContactInfo';
 import MapEmbed from './MapEmbed';
+import ContactoUbiacion from './ContactoUbicacion';
 
 const Content = () => (
   <main style={styles.main}>
     <AboutUs />
-    <Description />
     <ImageGallery />
-    <VideoEmbed videoId="tuVideoIdAqui" />
-    <ContactInfo />
-    <MapEmbed />
+    <VideoEmbed videoId="9H6kc576NTg" />
+    <ContactoUbiacion />
   </main>
 );
 

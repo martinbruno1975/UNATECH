@@ -2,7 +2,7 @@
     background-image: url('/images/extras/area-deposito.PNG');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
     color: white;
     display: flex;
     justify-content: center;
@@ -18,7 +18,8 @@
     background-color: rgba(0, 0, 0, 0.9);
     padding: 30px;
     border-radius: 10px;
-    max-width: 80%;
+    max-width: 90%;
+    width: 100%;
     margin: auto;
   }
   
@@ -30,5 +31,6 @@
   .about-us-content p {
     font-size: 1rem;
     line-height: 1.5;
+    overflow-wrap: break-word;
   }
   

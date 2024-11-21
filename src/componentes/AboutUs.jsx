@@ -6,10 +6,14 @@ const AboutUs = () => (
       <div className="about-us-content">
         <h1>Sobre Nosotros</h1>
         <p>
-        Somos una empresa especializada en la gestión integral de productos que lleva 10 años en el rubro. Nuestro enfoque está en optimizar 
-        cada fase del ciclo de vida de los productos, desde su planificación y desarrollo hasta su comercialización,
-         distribución y postventa. Trabajamos con un equipo multidisciplinario de expertos, utilizando tecnología 
-         de punta para asegurar la calidad y la eficiencia en todos nuestros procesos.
+        Hace 10 años, con una visión clara y un propósito firme, fundamos nuestra empresa para transformar la gestión 
+        integral de productos. Desde el principio, nos enfocamos en optimizar cada fase del ciclo de vida, desde la 
+        planificación y desarrollo hasta la comercialización, distribución y postventa. Con un equipo 
+        multidisciplinario de expertos y el uso de tecnología de punta, hemos logrado posicionarnos como líderes en 
+        el sector. Nuestro compromiso siempre ha sido ofrecer calidad, eficiencia y soluciones innovadoras que 
+        impulsen a nuestros clientes a alcanzar sus metas. Hoy, tras una década de crecimiento y éxito, seguimos 
+        trabajando para superar expectativas, adaptándonos al futuro y reafirmando nuestra misión de ser aliados 
+        estratégicos en cada etapa del ciclo de vida de los productos.
         </p>
         <p>
           Nuestra misión es brindar soluciones innovadoras para la gestión de productos, garantizando la satisfacción 

@@ -4,10 +4,10 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './ImageGallery.css';
 
-// Cambiamos cada elemento de `images` para que sea un objeto con `src` y `alt`.
 const images = [
-  { src: "/images/extras/local1.jpg", alt: "Imagen del local HUNATech" },
-  { src: "/images/extras/personal1.jpg", alt: "Imagen de personal trabajando" },
+  { src: "/images/extras/local1.jpg", alt: "Imagen del local HUNATech", link: "https://www.youtube.com/watch?v=DvkOWsMnkcw" },
+  { src: "/images/extras/personal1.jpg", alt: "Imagen de personal trabajando", link: "https://www.youtube.com/watch?v=rwTbI9nHTkI" },
+  { src: "/images/extras/logistica.PNG", alt: "Imagen genérica", link: "https://www.youtube.com/watch?v=OqYLg2q6s1g" },
 ];
 
 const ImageGallery = () => {
@@ -21,11 +21,17 @@ const ImageGallery = () => {
     autoplaySpeed: 3000,
   };
 
+  const handleImageClick = (link) => {
+    if (link) {
+      window.open(link, '_blank');
+    }
+  };
+
   return (
-    <div style={{ width: '80%', margin: '0 auto' }}>
+    <div style={{ width: '60%', maxWidth: '100rem', margin: '60px auto' }}>
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={index}>
+          <div key={index} onClick={() => handleImageClick(image.link)} style={{ cursor: 'pointer' }}>
             <img src={image.src} alt={image.alt} style={{ width: '100%', height: 'auto' }} />
           </div>
         ))}

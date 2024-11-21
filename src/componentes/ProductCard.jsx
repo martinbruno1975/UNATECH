@@ -1,10 +1,8 @@
-// src/ProductCard.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './ProductCard.css'
 
 const ProductCard = ({ product, addToCart }) => {
-
-
   const [quantity, setQuantity] = useState(1);
 
   const handleAddToCart = () => {
@@ -13,28 +11,22 @@ const ProductCard = ({ product, addToCart }) => {
   };
 
   return (
-    <div style={styles.card}>
-      <img src={"/"+product.pathImg} alt={product.pathImg} style={styles.image} />
+    <div className='card'>
+      <img src={"/" + product.pathImg} alt={product.pathImg} />
       <h3>{product.nombre}</h3>
       <p>{product.descripcion}</p>
       <p><strong>Precio:</strong> ${product.precio}</p>
-      <input
-        type="number"
-        value={quantity}
-        onChange={(e) => setQuantity(Math.max(1, Number(e.target.value)))}
-        style={styles.quantityInput}
-      />
-      <Link to={'/productos/'+product.id} variant="primary">Ver más</Link>
-      <button onClick={handleAddToCart} style={styles.button}>Agregar al carrito</button>
+      <div>
+        <input className='inputCantidad'
+          type="number"
+          value={quantity}
+          onChange={(e) => setQuantity(Math.max(1, Number(e.target.value)))}
+        />
+        <button onClick={handleAddToCart}>Agregar al carrito</button>
+      </div>
+      <Link to={'/productos/' + product.id}>Ver más</Link>
     </div>
   );
-};
-
-const styles = {
-  card: { border: '1px solid #ccc', padding: '1em', width: '200px', textAlign: 'center' },
-  image: { width: '100%', height: 'auto' },
-  quantityInput: { width: '50px', margin: '0.5em 0' },
-  button: { padding: '0.5em', backgroundColor: '#007bff', color: '#fff', border: 'none', cursor: 'pointer' },
 };
 
 export default ProductCard;

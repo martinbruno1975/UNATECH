@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import FabricanteCard from '../componentes/FabricanteCard';
 import ComponenteCard from '../componentes/ComponenteCard';
+import './FabricantesComponentes.css';
 
 export default function FabricantesComponentes() {
   const [fabricantes, setFabricantes] = useState([]);
@@ -23,17 +24,17 @@ export default function FabricantesComponentes() {
   return (
     <div>
       <div>
-        <h1>Fabricantes</h1>
-        <div>
+        <h1 id='fabr'>Fabricantes</h1>
+        <div className="fabricantes-container">
           {fabricantes.map(fabricante => (
             <FabricanteCard key={fabricante.id} fabricante={fabricante} />
           ))}
         </div>
       </div>
 
-      <div>
-        <h1>Componentes</h1>
-        <div>
+      <div id='listaComps'>
+        <h1 id='comps'>Componentes</h1>
+        <div className="componentes-lista">
           {componentes.map(componente => (
             <ComponenteCard key={componente.id} componente={componente} />
           ))}

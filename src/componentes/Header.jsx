@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
@@ -15,6 +15,18 @@ const Header = () => {
     setSubMenuAbierto(false);
   };
 
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
     <div className="menu-container">
       <div className="left">
@@ -29,7 +41,7 @@ const Header = () => {
           <span className="menu-icon">{estaAbierto ? 'X' : '☰'}</span>
         </div>
         <ul className={`menu-list ${estaAbierto ? 'show' : ''}`}>
-          <li><NavLink to="/">Inicio</NavLink></li>
+          <li><NavLink to="/#inicio">Inicio</NavLink></li>
           <li 
             className="dropdown" 
             onMouseEnter={abrirSubMenu} 
@@ -38,8 +50,8 @@ const Header = () => {
             <NavLink>Sobre Nosotros</NavLink>
             <ul className={`dropdown-menu ${subMenuAbierto ? 'show' : ''}`}>
               <li><NavLink >Servicios</NavLink></li>
-              <li><NavLink >Galería</NavLink></li>
-              <li><NavLink >Contacto/Ubicacion</NavLink></li>
+              <li><NavLink to="/#galeria">Galería</NavLink></li>
+              <li><NavLink to="/#contacto">Contacto/Ubicacion</NavLink></li>
             </ul>
           </li>
           <li><NavLink to="/productos">Productos</NavLink></li>

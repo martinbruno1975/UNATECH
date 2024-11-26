@@ -28,7 +28,7 @@ const ImageGallery = () => {
   };
 
   return (
-    <div style={{ width: '60%', maxWidth: '100rem', margin: '60px auto' }}>
+    <div id="galeria" style={{ width: '60%', maxWidth: '100rem', margin: '60px auto' }}>
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} onClick={() => handleImageClick(image.link)} style={{ cursor: 'pointer' }}>

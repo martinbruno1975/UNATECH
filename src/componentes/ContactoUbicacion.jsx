@@ -5,7 +5,7 @@ import './ContactoUbicacion.css';
 
 export default function ContactoUbiacion() {
   return (
-    <div className="container">
+    <div id='contacto' className="container">
       <div className="contact-info">
         <ContactInfo />
       </div>

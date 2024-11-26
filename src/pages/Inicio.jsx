@@ -3,7 +3,7 @@ import Content from '../componentes/Content'
 
 export default function Inicio() {
   return (
-    <div>
+    <div id='inicio'>
       <Content />
     </div>
   )

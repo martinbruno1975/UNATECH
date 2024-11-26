@@ -7,7 +7,11 @@ const Cart = ({ cart }) => {
 
   return (
     <div style={styles.cart}>
-      <h2>Carrito</h2>
+      <div style={styles.total}>
+        <h2>Carrito</h2>
+        <h5>Total: ${calculateTotal()}</h5>
+      </div>
+      
       <ul>
         {cart.map(item => (
           <li key={item.id}>
@@ -15,13 +19,19 @@ const Cart = ({ cart }) => {
           </li>
         ))}
       </ul>
-      <h3>Total: ${calculateTotal()}</h3>
+      
     </div>
   );
 };
 
 const styles = {
   cart: { marginTop: '2em', padding: '1em', border: '1px solid #ccc' },
+  total: {display: 'flex', 
+    justifyContent: 'space-between',
+    backgroundColor: '#FFA500',
+    alignItems: 'center',
+    alignContent: 'center'
+  }
 };
 
 export default Cart;

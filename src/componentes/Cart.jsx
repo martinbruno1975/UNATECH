@@ -25,12 +25,15 @@ const Cart = ({ cart }) => {
 };
 
 const styles = {
-  cart: { marginTop: '2em', padding: '1em', border: '1px solid #ccc' },
+  cart: { marginTop: '2em', padding: '1em', border: '1px solid #ccc'},
   total: {display: 'flex', 
     justifyContent: 'space-between',
     backgroundColor: '#FFA500',
     alignItems: 'center',
-    alignContent: 'center'
+    alignContent: 'center',
+    color:'black',
+    borderRadius: '10px',
+    padding:'0 15px 0 15px'
   }
 };
 

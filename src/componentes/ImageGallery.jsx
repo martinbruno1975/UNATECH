@@ -29,15 +29,28 @@ const ImageGallery = () => {
 
   return (
     <div id="galeria" style={{ width: '60%', maxWidth: '100rem', margin: '60px auto' }}>
+      <h1 className="titulo">Galería de Imagenes</h1>
+      <p>En esta sección podrás visualizar las distintas áreas que componen nuestra empresa para gestionar la comercialización y distribución de productos tecnológicos. Hacé click en cada imagen para ver un video explicativo.</p>
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} onClick={() => handleImageClick(image.link)} style={{ cursor: 'pointer' }}>
-            <img src={image.src} alt={image.alt} style={{ width: '100%', height: 'auto' }} />
+            <img src={image.src} alt={image.alt} style={{ width: '100%', height: 'auto', cursor:'pointer' }} />
           </div>
         ))}
       </Slider>
     </div>
   );
 };
+
+/*
+const styles = {
+  titulo: {display: 'flex', 
+    justifyContent: 'space-between',
+    backgroundColor: '#FFA500',
+    alignItems: 'center',
+    alignContent: 'center'
+  }
+};
+*/
 
 export default ImageGallery;

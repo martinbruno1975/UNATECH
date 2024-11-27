@@ -20,7 +20,7 @@ const Header = () => {
   useEffect(() => {
     if (location.hash) {
       const element = document.querySelector(location.hash);
-      
+
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
@@ -49,7 +49,6 @@ const Header = () => {
           >
             <NavLink>Sobre Nosotros</NavLink>
             <ul className={`dropdown-menu ${subMenuAbierto ? 'show' : ''}`}>
-              <li><NavLink >Servicios</NavLink></li>
               <li><NavLink to="/#galeria">Galería</NavLink></li>
               <li><NavLink to="/#contacto">Contacto/Ubicacion</NavLink></li>
             </ul>

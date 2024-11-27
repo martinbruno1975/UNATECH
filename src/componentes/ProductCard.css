@@ -42,4 +42,8 @@
     font-size: 0.9em;
     font-weight: 600;
   }
+
+  #botonAgregar {
+    padding: 0px 5px 0px 5px;
+  }
   

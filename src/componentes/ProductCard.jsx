@@ -22,7 +22,7 @@ const ProductCard = ({ product, addToCart }) => {
           value={quantity}
           onChange={(e) => setQuantity(Math.max(1, Number(e.target.value)))}
         />
-        <button onClick={handleAddToCart}>Agregar al carrito</button>
+        <button id='botonAgregar' onClick={handleAddToCart}>Agregar al carrito</button>
       </div>
       <Link to={'/productos/' + product.id}>Ver más</Link>
     </div>

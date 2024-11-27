@@ -6,12 +6,14 @@ import FabricantesComponentes from './pages/FabricantesComponentes'
 import Header from './componentes/Header';
 import Footer from './componentes/Footer';
 import Producto from './pages/Producto';
+import ScrollToTop from './componentes/ScrollToTop';
 
 
 const App = () => {
   return (
     <div style={styles.app}>
       <Header />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/productos" element={<Productos />} />

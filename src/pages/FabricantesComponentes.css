@@ -12,9 +12,10 @@
 
 .componentes-lista {
   display: block;
-  margin: 0;
-  padding: 0;
-  margin-left: 60px;
+  /*margin: 0;*/
+  padding: 50px;
+  margin-left: 0px;
+  color: black;
 }
 
 .componentes-lista > * {

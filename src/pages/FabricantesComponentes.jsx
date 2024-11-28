@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import FabricanteCard from '../componentes/FabricanteCard';
-import ComponenteCard from '../componentes/ComponenteCard';
+import FabricanteCard from '../componentes/cards/FabricanteCard';
+import ComponenteCard from '../componentes/cards/ComponenteCard';
 import './FabricantesComponentes.css';
 
 export default function FabricantesComponentes() {

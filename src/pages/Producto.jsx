@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import ComponenteCard from '../componentes/ComponenteCard';
-import FabricanteCard from '../componentes/FabricanteCard';
+import ComponenteCard from '../componentes/cards/ComponenteCard';
+import FabricanteCard from '../componentes/cards/FabricanteCard';
 
 export default function Producto() {
   const { id } = useParams()

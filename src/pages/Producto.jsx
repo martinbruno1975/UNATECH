@@ -69,15 +69,17 @@ const styles = {
   //CSS del producto
   producto: {
     display: "flex",
+    flexWrap: 'wrap',
     margin: "auto",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    padding: "20px",
+    //padding: "20px",
     color: "white",
     minHeight: "100vh",
     marginTop: "80px",
-    maxWidth: "1500px",
+    //maxWidth: "1500px",
+    width:"100vw"
   },
   datos: {
     display: "flex",
@@ -87,7 +89,8 @@ const styles = {
     border: "1px solid #ddd",
     padding: "20px",
     borderRadius: "10px",
-    maxWidth: "80vw",
+    //maxWidth: "80vw",
+    width: "80%",
     margin: "40px auto",
     boxShadow: "0px 2px 8px 2px rgba(255, 165, 0, 0.9)",
     backgroundColor: "white",
@@ -126,8 +129,8 @@ const styles = {
 
   //CSS de componentes y fabricantes
   seccionContainer: {
-    width: "100%",
-    maxWidth: "1200px",
+    width:"100vw",
+    //maxWidth: "1200px",
     margin: "40px auto",
     padding: "20px",
     borderRadius: "10px",
@@ -148,6 +151,7 @@ const styles = {
   },
   grid: {
     display: "grid",
+    flexWrap: 'wrap',
     gridTemplateColumns: "repeat(3, 1fr)",
     gap: "40px",
     justifyContent: "center",
@@ -160,3 +164,5 @@ const styles = {
     marginTop: "10px",
   },
 };
+
+

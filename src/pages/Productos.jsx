@@ -41,7 +41,12 @@ const ProductsPage = () => {
 
 const styles = {
   page: { padding: '2em' },
-  productList: { display: 'flex', flexWrap: 'wrap', gap: '3em' },
+  productList: { 
+    display: 'flex', 
+    flexWrap: 'wrap', 
+    gap: '3em', 
+    justifyContent: "center",
+     },
 };
 
 export default ProductsPage;

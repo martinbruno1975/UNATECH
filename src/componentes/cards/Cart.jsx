@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cart.css'
 
 const Cart = ({ cart }) => {
   const calculateTotal = () => {
@@ -6,8 +7,8 @@ const Cart = ({ cart }) => {
   };
 
   return (
-    <div style={styles.cart}>
-      <div style={styles.total}>
+    <div className='carrito'>
+      <div className='cart-total'>
         <h2>Carrito</h2>
         <h5>Total: ${calculateTotal()}</h5>
       </div>
@@ -22,19 +23,6 @@ const Cart = ({ cart }) => {
       
     </div>
   );
-};
-
-const styles = {
-  cart: { marginTop: '2em', padding: '1em', border: '1px solid #ccc'},
-  total: {display: 'flex', 
-    justifyContent: 'space-between',
-    backgroundColor: '#FFA500',
-    alignItems: 'center',
-    alignContent: 'center',
-    color:'black',
-    borderRadius: '10px',
-    padding:'0 15px 0 15px'
-  }
 };
 
 export default Cart;

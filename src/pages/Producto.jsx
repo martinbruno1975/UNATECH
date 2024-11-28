@@ -52,7 +52,7 @@ export default function Producto() {
           <div style={styles.grid}>
             {productoF.Fabricantes && productoF.Fabricantes.length > 0 ? (
               productoF.Fabricantes.map(fabricante => (
-                <FabricanteCard key={fabricante.id} fabricante={fabricante} />
+                <FabricanteCard id="card" key={fabricante.id} fabricante={fabricante} />
               ))
             ) : (
               <p style={styles.mensaje}>No hay fabricantes disponibles.</p>
@@ -74,11 +74,9 @@ const styles = {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    //padding: "20px",
     color: "white",
     minHeight: "100vh",
     marginTop: "80px",
-    //maxWidth: "1500px",
     width:"100vw"
   },
   datos: {
@@ -89,7 +87,6 @@ const styles = {
     border: "1px solid #ddd",
     padding: "20px",
     borderRadius: "10px",
-    //maxWidth: "80vw",
     width: "80%",
     margin: "40px auto",
     boxShadow: "0px 2px 8px 2px rgba(255, 165, 0, 0.9)",
@@ -117,6 +114,7 @@ const styles = {
     borderRadius: "10px",
     objectFit: "cover",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
+    maxWidth: "100%"
   },
   p: {
     color: "#333",
@@ -130,7 +128,7 @@ const styles = {
   //CSS de componentes y fabricantes
   seccionContainer: {
     width:"100vw",
-    //maxWidth: "1200px",
+    maxWidth: "1235px",
     margin: "40px auto",
     padding: "20px",
     borderRadius: "10px",
@@ -151,12 +149,13 @@ const styles = {
   },
   grid: {
     display: "grid",
-    flexWrap: 'wrap',
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gap: "40px",
+    gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+    gap: "20px",
     justifyContent: "center",
-    margin: "20px",
     alignItems: "center",
+    margin: "0 auto",
+    padding: "20px",
+    width: "100%"
   },
   mensaje: {
     fontSize: "18px",

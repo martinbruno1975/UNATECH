@@ -77,9 +77,9 @@
 }
 
 .seccion {
-    margin-bottom: 40px;
-    text-align: center;
-    color: black
+    /*margin-bottom: 40px;*/
+    /*text-align: center;*/
+    color: black;
 }
 
 .seccion h1 {
@@ -91,13 +91,13 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    justify-content: center;
-    align-items: center;
+    /*justify-content: center;
+    align-items: center;*/
     margin: 0 auto;
     padding: 20px;
-    width: 100%
+    /*width: 100%;*/
 }
 
 .mensaje {
@@ -105,3 +105,22 @@
     color: black;
     margin-top: 10px  
 }
+
+@media (max-width: 670px) {
+    .grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 671px) and (max-width: 1000px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1001px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+}
+

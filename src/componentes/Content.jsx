@@ -2,8 +2,6 @@ import React from 'react';
 import AboutUs from './AboutUs';
 import ImageGallery from './multimedia/ImageGallery';
 import VideoEmbed from './multimedia/VideoEmbed';
-import ContactInfo from './contact/ContactInfo';
-import MapEmbed from './contact/MapEmbed';
 import ContactoUbiacion from './contact/ContactoUbicacion';
 
 const Content = () => (
@@ -20,7 +18,7 @@ const styles = {
     padding: '2em',
     backgroundColor: '#222',
     color: '#fff',
-    minHeight: '60vh',
+    /*minHeight: '60vh',*/
   },
 };
 
